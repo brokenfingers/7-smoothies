@@ -2,5 +2,59 @@
 @import "./components/font-awesome.min.css";
 @import "./components/buttons.css";
 
+:root {
+  --primary-clr: #ff5e61;
+}
+
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  padding-top: 15px;
+}
+
+.logo {
+  max-height: 40px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav > a {
+  font-size: 17px;
+  color: #000;
+  text-decoration: none;
+}
+
+.nav > a:hover {
+  color: var(--primary-clr);
+  text-decoration: underline;
+}
+
+.nav + .nav {
+  margin-left: 30px;
+}
+
+.container {
+  display: flex;
+  justify-content: flex-end;
+  width: 800px;
+}
+
+.container > *:first-child {
+  margin-right: auto;
+}
+
+.leftContent {
+  width: 60%;
+}
+
+.rightContent {
+  width: 40%;
 }
