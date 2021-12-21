@@ -1,0 +1,24 @@
+{
+  "name": "7-smoothies",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "live-server --port=3000 --host=localhost",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brokenfingers/7-smoothies.git"
+  },
+  "keywords": [],
+  "author": "brokenfingers",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brokenfingers/7-smoothies/issues"
+  },
+  "homepage": "https://github.com/brokenfingers/7-smoothies#readme",
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  }
+}
