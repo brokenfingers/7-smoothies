@@ -128,7 +128,9 @@ header {
   margin-bottom: 30px;
 }
 a.btn {
-  width: 7.8em;
+  width: 8.5em;
+  text-align: center;
+  border-radius: 4.25em;
 }
 
 .list {
@@ -152,8 +154,6 @@ a.btn {
   list-style: none;
 }
 
-.rightList .berry {
-}
 .rightList li {
   display: inline-block;
   content: "";
@@ -164,13 +164,35 @@ a.btn {
   background-color: #fcc7d6;
 }
 
+.list-section {
+  margin-bottom: 20px;
+}
+
 .berry {
   transform: translate(20%, 20%);
+}
+
+.container + .container {
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1100px) {
+  .container {
+    width: 800px;
+  }
 }
 
 @media (max-width: 900px) {
   .container {
     width: 600px;
+  }
+
+  .list-section {
+    flex-direction: column;
+  }
+
+  .leftContent > a.fa {
+    top: 25%;
   }
 }
 
@@ -185,9 +207,15 @@ a.btn {
   .rightContent {
     width: 100%;
   }
+  .leftContent > a.fa {
+    top: 50%;
+  }
 }
 
 @media (max-width: 500px) {
+  .logo {
+    margin-bottom: 20px;
+  }
   .container {
     width: 300px;
   }
@@ -199,5 +227,6 @@ a.btn {
 @media (max-width: 320px) {
   .container {
     width: 100%;
+    padding: 7%;
   }
 }
