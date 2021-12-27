@@ -19,6 +19,7 @@ header {
 
 .logo {
   max-height: 40px;
+  object-fit: contain;
 }
 
 .nav {
@@ -38,18 +39,85 @@ header {
   text-decoration: underline;
 }
 
+.fa.fa-bars {
+  font-size: 1.5em;
+  display: none;
+  padding: 0.8em;
+  cursor: pointer;
+}
+
+.fa.fa-bars:hover {
+  color: #ff5e61;
+}
+
 .nav + .nav {
   margin-left: 30px;
+}
+
+.menu {
+  margin-top: 260px;
+}
+
+.menu .header {
+  background-color: #fff;
+  padding-top: 0;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  flex-direction: row;
+  justify-content: space-between;
+  /* position: relative; */
+}
+
+.menu .logo {
+  background-color: #fff;
+  padding: 1em 0;
+  margin-bottom: 0;
+  /* left: 30px; */
+  max-height: 60px;
+  width: 100%;
+  object-fit: contain;
+  object-position: left;
+  z-index: 1;
+}
+
+.menu .nav {
+  background-color: #fff;
+  width: 100%;
+  top: 44px;
+  left: 0;
+  text-align: center;
+  display: flex;
+  position: fixed;
+  margin: 0;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  gap: 0;
+}
+
+.menu .nav + .nav {
+  top: 164px;
+  /* gap: 20px; */
+}
+
+.menu .nav a {
+  padding: 10px 0;
+  width: 100vw;
+}
+
+.menu .nav a:hover {
+  background-color: #fcc7d6;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 .container {
   display: flex;
   justify-content: flex-end;
   width: 1000px;
-}
-
-.header {
-  flex-wrap: wrap;
 }
 
 .container > *:first-child {
@@ -210,12 +278,17 @@ a.btn {
   .leftContent > a.fa {
     top: 50%;
   }
+
+  .nav {
+    display: none;
+  }
+
+  .fa.fa-bars {
+    display: inline-block;
+  }
 }
 
 @media (max-width: 500px) {
-  .logo {
-    margin-bottom: 20px;
-  }
   .container {
     width: 300px;
   }
